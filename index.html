@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trajetas</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      :root {
+        --color-verde: #35ce8d;
+        --color-azul: #53b3cb;
+        --color-amarillo: #f9c22e;
+      }
+      .container {
+        margin: 50px auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+      }
+
+      .card {
+        position: relative;
+        width: 250px;
+        height: 400px;
+        border: 20px solid var(--color-verde);
+        border-radius: 20px;
+        transform: rotate(-20deg) scale(0.9);
+        overflow: hidden;
+        transition: all 0.25s ease;
+        & .cabecera {
+          background: var(--color-verde);
+          padding: 10px;
+          border: none;
+          position: fixed;
+          z-index: 1;
+        }
+        & img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+
+          transform: scale(1);
+          transition: all 0.25s ease;
+        }
+        & .precio {
+          background: var(--color-verde);
+          padding: 10px;
+          border: none;
+          position: fixed;
+          bottom: 0;
+          right: 0;
+        }
+        &:hover {
+          transform: rotate(0deg) scale(1.2);
+          z-index: 99;
+          & img {
+            transform: scale(1.7) translateY(33px);
+            object-position: center;
+          }
+        }
+      }
+
+      .card1 {
+        border-color: var(--color-azul);
+        & .cabecera,
+        .precio {
+          background-color: var(--color-azul);
+        }
+      }
+      .card2 {
+        border-color: var(--color-verde);
+        & .cabecera,
+        .precio {
+          background-color: var(--color-verde);
+        }
+      }
+      .card3 {
+        border-color: var(--color-amarillo);
+        & .cabecera,
+        .precio {
+          background-color: var(--color-amarillo);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="card card2">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless24.jpg"
+              alt="remera marron"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card1">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless01.jpg"
+              alt="remera unicornio"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless07.jpg"
+              alt="remera mounstruo"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless20.jpg"
+              alt="remera serpiente"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card1">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless09.jpg"
+              alt="remera astronauta"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless18.jpg"
+              alt="remera estrella"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless11.jpg"
+              alt="remera Godzilla"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+        <div class="card card1">
+          <div class="cabecera"><span>Today We Rider</span></div>
+          <div>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/881020/threadless17.jpg"
+              alt="remera Gatita"
+            />
+          </div>
+          <div class="precio">
+            <span>$25</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
